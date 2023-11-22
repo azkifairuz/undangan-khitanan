@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
 
 .font-esthetic {
     font-family: 'Sacramento', cursive !important;
-    color: #000 !important;
+    color: #2C3639 !important;
 }
 
 .font-esthetic-main {
@@ -37,10 +37,12 @@ body::-webkit-scrollbar {
     z-index: 1; /* Pastikan lapisan ini berada di depan gambar */
   }
 
-
+.text-dark {
+    color:#2C3639;
+}
 .font-arabic {
     font-family: 'Noto Naskh Arabic', serif !important;
-    color: #000 !important;
+    color: #2C3639 !important;
 }
 
 .img-crop {

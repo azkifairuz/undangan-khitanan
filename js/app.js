@@ -149,8 +149,14 @@ const util = (() => {
     };
 
     const tamu = () => {
-        let name = (new URLSearchParams(window.location.search)).get('to');
+        // Mendapatkan URL saat ini
+        var currentUrl = window.location.href;
 
+        // Membuat objek URL dari URL saat ini
+        var url = new URL(currentUrl);
+
+        // Mendapatkan nilai parameter "name"
+        var name = url.searchParams.get("name");
         if (!name) {
             document.getElementById('nama-tamu').remove();
             return;
@@ -160,7 +166,6 @@ const util = (() => {
         div.classList.add('m-2');
         div.innerHTML = `<p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p><h2 class="text-light">${escapeHtml(name)}</h2>`;
 
-        document.getElementById('form-nama').value = name;
         document.getElementById('nama-tamu').appendChild(div);
     };
 
