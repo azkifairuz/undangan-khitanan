@@ -15,12 +15,32 @@ body::-webkit-scrollbar {
 
 .font-esthetic {
     font-family: 'Sacramento', cursive !important;
-    color: #ffffff !important;
+    color: #000 !important;
 }
+
+.font-esthetic-main {
+    font-family: 'Sacramento', cursive !important;
+    color: #fff !important;
+}
+
+.bg-self{
+    background-color:#ADC4CE;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan tingkat transparansi (alpha) sebanyak 0.5 */
+    z-index: 1; /* Pastikan lapisan ini berada di depan gambar */
+  }
+
 
 .font-arabic {
     font-family: 'Noto Naskh Arabic', serif !important;
-    color: #ffffff !important;
+    color: #000 !important;
 }
 
 .img-crop {
@@ -86,6 +106,10 @@ body::-webkit-scrollbar {
     }
 }
 
+.bg-main-purple{
+    background-color:#96B6C5;
+}
+
 .mouse-animation>.scroll-animation {
     width: 0.25rem;
     height: 0.625rem;
@@ -98,13 +122,37 @@ body::-webkit-scrollbar {
 }
 
 .dark-section {
-    background-color: #111111 !important;
+    background-color: #ADC4CE !important;
     margin-top: -0.4rem;
     margin-bottom: -0.4rem;
 }
 
 footer {
-    background-color: #111111 !important;
+    background-color: #ADC4CE !important;
     margin-top: -0.4rem;
     padding-bottom: 4rem;
 }
+
+.imagebg {
+    height: 100vh !important;
+          background-image: url('../assets/hero.jpg');
+          background-color: black;
+          background-position: center ; /* Center the image */
+          background-repeat: no-repeat; /* Do not repeat the image */
+          background-size: cover;
+          z-index: 2;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .imagebg {
+        height: 100vh !important;
+              background-image: url('../assets/1686989720104.jpg');
+              background-color: black;
+              background-position: center; /* Center the image */
+              background-repeat: no-repeat; /* Do not repeat the image */
+              background-size: cover;
+              z-index: 2;
+    }
+} 
+
