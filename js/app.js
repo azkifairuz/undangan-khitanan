@@ -157,6 +157,8 @@ const util = (() => {
 
         // Mendapatkan nilai parameter "name"
         var name = url.searchParams.get("name");
+        var s = url.searchParams.get("s");
+
         if (!name) {
             document.getElementById('nama-tamu').remove();
             return;
@@ -164,7 +166,7 @@ const util = (() => {
 
         let div = document.createElement('div');
         div.classList.add('m-2');
-        div.innerHTML = `<p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p><h2 class="text-light">${escapeHtml(name)}</h2>`;
+        div.innerHTML = `<p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth ${s}:</p><h2 class="text-light">${escapeHtml(name)}</h2>`;
 
         document.getElementById('nama-tamu').appendChild(div);
     };
