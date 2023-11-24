@@ -137,7 +137,7 @@ footer {
 
 .imagebg {
     height: 100vh !important;
-          background-image: url('../assets/hero.jpg');
+          background-image: url('../assets/hero.webp');
           background-color: black;
           background-position: center ; /* Center the image */
           background-repeat: no-repeat; /* Do not repeat the image */
