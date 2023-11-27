@@ -149,7 +149,7 @@ footer {
 @media only screen and (max-width: 600px) {
     .imagebg {
         height: 100vh !important;
-              background-image: url('../assets/1686989720104.jpg');
+              background-image: url('../assets/hero.webp');
               background-color: black;
               background-position: center; /* Center the image */
               background-repeat: no-repeat; /* Do not repeat the image */
