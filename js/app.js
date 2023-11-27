@@ -712,32 +712,7 @@ const comment = (() => {
     };
 
     // OK
-    const ucapan = async () => {
-        const UCAPAN = document.getElementById('daftar-ucapan');
-        UCAPAN.innerHTML = renderLoading(pagination.getPer());
 
-        let token = localStorage.getItem('token') ?? '';
-        if (token.length == 0) {
-            alert('Terdapat kesalahan, token kosong !');
-            window.location.reload();
-            return;
-        }
-
-        await request('GET', `/api/comment?per=${pagination.getPer()}&next=${pagination.getNext()}`)
-            .token(token)
-            .then((res) => {
-                if (res.code == 200) {
-                    UCAPAN.innerHTML = null;
-                    res.data.forEach((data) => UCAPAN.appendChild(renderCard(data)));
-                    pagination.setResultData(res.data.length);
-
-                    if (res.data.length == 0) {
-                        UCAPAN.innerHTML = `<div class="h6 text-center">Tidak ada data</div>`;
-                    }
-                }
-            })
-            .catch((err) => alert(`Terdapat kesalahan: ${err}`));
-    };
 
     // OK
     const renderLoading = (num) => {
@@ -981,7 +956,7 @@ const comment = (() => {
 
     // OK
     return {
-        ucapan: ucapan,
+     
         kirim: send,
         renderLoading: renderLoading,
 
