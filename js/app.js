@@ -167,7 +167,7 @@ const util = (() => {
         let div = document.createElement('div');
         div.classList.add('m-2');
         div.innerHTML = `<p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth ${s}:</p><h2 class="text-light">${escapeHtml(name)}</h2>`;
-
+        console.log(name);
         document.getElementById('nama-tamu').appendChild(div);
     };
 
@@ -260,5 +260,7 @@ const audio = (() => {
     };
 })();
 
-
+document.addEventListener('DOMContentLoaded', () => {
+    util.tamu();
+});
 
